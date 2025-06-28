@@ -2,7 +2,7 @@
   "name": "education-app-server",
   "version": "1.0.0",
   "description": "Backend server for Education App",
-  "main": "server.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node server.js"
   },
