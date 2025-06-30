@@ -1,20 +1,14 @@
 {
-  "name": "education-app-server",
-  "version": "1.0.0",
-  "description": "Backend server for Education App",
-  "main": "api/index.js",
-  "scripts": {
-    "start": "node api/index.js"
-  },
-  "keywords": [],
-  "author": "Mahmoud Hamd",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mongoose": "^8.4.3",
-    "multer": "^1.4.5-lts.1"
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18.x",
+      "installCommand": "npm install"
+    }
   }
 }
