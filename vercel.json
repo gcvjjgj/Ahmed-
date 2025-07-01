@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/index.js": {
-      "runtime": "@vercel/node@20.x"
+      "runtime": "@vercel/node@20.x",
+      "installCommand": "npm install"
     }
   },
   "rewrites": [
