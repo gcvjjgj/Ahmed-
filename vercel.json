@@ -1,0 +1,20 @@
+{
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.js"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "SECRET_KEY": "@secret_key",
+    "FIREBASE_STORAGE_BUCKET": "@firebase_storage_bucket",
+    "FIREBASE_SERVICE_ACCOUNT": "@firebase_service_account"
+  }
+}
